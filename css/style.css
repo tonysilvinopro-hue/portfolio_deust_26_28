@@ -1,0 +1,17 @@
+nav li {
+    background-color: bluevio2et;
+}
+
+main li img {
+    width: 300px;
+}
+
+.gallery  {
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.gallery li {
+    flex-basis: 400px;
+}
