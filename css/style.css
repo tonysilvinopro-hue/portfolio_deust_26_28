@@ -1,17 +1,121 @@
-nav li {
-    background-color: bluevio2et;
+/* css commun aux pages */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
-main li img {
-    width: 300px;
+body {
+    margin: 0;
+    font-family: var(--font-main);
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    background-image: var(--grain);
 }
 
-.gallery  {
-    display:flex;
-    flex-wrap: wrap;
+h1, h2, h3 {
+    line-height: 1.2;
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.15rem; }
+
+a {
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-accent);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* En-tête et nav */
+#main-header {
+    display: flex;
     flex-direction: column;
+    gap: var(--space-m);
+    padding: var(--space-m);
+    border-bottom: 1px solid var(--color-border);
 }
 
-.gallery li {
-    flex-basis: 400px;
+#main-header p {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-s);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* le contenu principal de la page */
+
+main {
+    max-width: 70rem;
+    margin: 0 auto;
+    padding: var(--space-l) var(--space-m);
+}
+
+/* les cartes */
+.card {
+    padding: var(--space-m);
+    background-color: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    transition: border-color 0.3s ease;
+}
+
+.card:hover {
+    border-color: var(--color-accent);
+}
+
+/* le footer */
+footer {
+    padding: var(--space-m);
+    text-align: center;
+    border-top: 1px solid var(--color-border);
+}
+
+footer p {
+    margin: 0;
+}
+
+/* responsive tablette et ordi */
+@media (min-width: 768px) {
+    h1 { font-size: 2.75rem; }
+    h2 { font-size: 1.75rem; }
+
+    #main-header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: var(--space-m) var(--space-l);
+    }
+
+    header nav ul {
+        flex-direction: row;
+        align-items: center;
+        gap: var(--space-l);
+    }
+
+    main {
+        padding: var(--space-l);
+    }
 }

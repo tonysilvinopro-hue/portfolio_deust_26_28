@@ -1,0 +1,73 @@
+/* cartes une seule colonne */
+.grid-projets {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: var(--space-l) 0 0;
+}
+
+/* Mobile : image, titre, description empilés */
+.project-link {
+    display: grid;
+    gap: var(--space-m);
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-image {
+    margin: 0;
+}
+
+.project-image img {
+    display: block;
+    width: 100%;
+}
+
+.project-category {
+    margin-top: var(--space-s);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.project-title {
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.project-description {
+    margin: 0;
+}
+
+/* Survol de carte */
+.project-link:hover .project-title {
+    color: var(--color-accent);
+}
+
+/* Tablette et ordi image à gauche */
+@media (min-width: 768px) {
+    .project-link {
+        grid-template-columns: 2fr 3fr;
+        grid-template-rows: auto 1fr;
+        grid-template-areas:
+            "image title"
+            "image description";
+        column-gap: var(--space-l);
+        row-gap: var(--space-s);
+    }
+
+    .project-image {
+        grid-area: image;
+    }
+
+    .project-title {
+        grid-area: title;
+    }
+
+    .project-description {
+        grid-area: description;
+    }
+}

@@ -1,0 +1,58 @@
+/* Mobile : tout est l'un sous l'autre */
+.container-cv {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-m);
+}
+
+.container-cv h1 {
+    margin: 0;
+}
+
+/* Sommaire interne */
+.container-cv nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-m);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#formation li,
+#experiences li {
+    margin-bottom: 1.25rem;
+}
+
+#formation ol,
+#experiences ul {
+    padding-left: 1.25rem;
+}
+
+main figure {
+    margin: var(--space-l) 0 0;
+    text-align: center;
+}
+
+main figcaption {
+    margin-top: var(--space-s);
+    font-size: 0.9rem;
+}
+
+/* Tablette et ordinateur : les articles passent côte à côte */
+@media (min-width: 768px) {
+    .container-cv {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    /* Le titre et le sommaire occupent toute la largeur */
+    .container-cv h1,
+    .container-cv nav {
+        flex: 0 0 100%;
+    }
+
+    .container-cv article {
+        flex: 1 1 20rem;
+    }
+}

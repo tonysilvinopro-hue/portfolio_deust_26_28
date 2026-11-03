@@ -1,1 +1,18 @@
-:root
+:root {
+    /* Couleurs */
+    --color-text: #25282B;                     /* anthracite */
+    --color-bg: #F1F4EB;                       /* fond clair */
+    --color-accent: #637783;                   /* bleu ardoise (survols) */
+    --color-card: rgba(255, 255, 255, 0.55);   /* fond des cartes */
+    --color-border: rgba(37, 40, 43, 0.15);    /* bordures discrètes */
+
+    --font-main: "Manrope", Arial, sans-serif;
+
+    /* Espacements et formes */
+    --space-s: 0.5rem;
+    --space-m: 1rem;
+    --space-l: 2rem;
+    --radius: 0.5rem;
+
+    --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.1'/%3E%3C/svg%3E");
+}
