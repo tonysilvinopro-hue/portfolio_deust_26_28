@@ -47,6 +47,10 @@
     color: var(--color-accent);
 }
 
+.project-link:hover {
+    color: inherit;
+}
+
 /* Tablette et ordi image à gauche */
 @media (min-width: 768px) {
     .project-link {

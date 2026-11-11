@@ -1,0 +1,201 @@
+/* ===== pagesprojets.css : pages de détail des projets ===== */
+
+/* --- Présentation --- */
+.back-link {
+    display: inline-block;
+    margin-bottom: var(--space-m);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.project-category {
+    margin: 0 0 var(--space-s);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.project-header h1 {
+    margin: 0 0 var(--space-m);
+}
+
+.project-introduction {
+    max-width: 45rem;
+    font-size: 1.1rem;
+}
+
+/* Mobile : les infos sont l'une sous l'autre */
+.project-meta {
+    display: grid;
+    gap: var(--space-s);
+    list-style: none;
+    padding: 0;
+    margin: var(--space-l) 0 0;
+}
+
+/* --- Texte de présentation --- */
+.project-about {
+    display: grid;
+    gap: var(--space-m);
+    margin-top: var(--space-l);
+}
+
+.project-about h2 {
+    margin-top: 0;
+}
+
+.project-about p {
+    margin-bottom: 0;
+}
+
+/* --- Visuel principal --- */
+.project-featured-image {
+    margin: var(--space-l) 0 0;
+}
+
+.project-featured-image img {
+    display: block;
+    width: 100%;
+}
+
+.project-featured-image figcaption {
+    margin-top: var(--space-s);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* --- Grille des supports --- */
+.project-documents {
+    margin-top: var(--space-l);
+}
+
+.grid-documents {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: var(--space-m) 0 0;
+}
+
+.document-link {
+    display: grid;
+    gap: var(--space-s);
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Annule le bleu de a:hover pour tout sauf le titre */
+.document-link:hover {
+    color: inherit;
+}
+
+.document-preview {
+    margin: 0;
+}
+
+.document-preview img {
+    display: block;
+    width: 100%;
+}
+
+.document-preview figcaption {
+    margin-top: var(--space-s);
+}
+
+.document-title {
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.document-link:hover .document-title {
+    color: var(--color-accent);
+}
+
+.document-description {
+    margin: 0;
+}
+
+/* --- Dossier de présentation --- */
+.project-brandbook {
+    margin-top: var(--space-l);
+}
+
+.download-link {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-bg);
+    background-color: var(--color-text);
+    border-radius: var(--radius);
+    transition: background-color 0.3s ease;
+}
+
+.download-link:hover {
+    color: var(--color-bg);
+    background-color: var(--color-accent);
+}
+
+/* --- Tablette et ordinateur --- */
+@media (min-width: 768px) {
+    .project-meta {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .project-about {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-l);
+    }
+
+        .project-gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .flyer-pair {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* --- Galerie d'images et recto/verso --- */
+.project-gallery,
+.flyer-pair {
+    display: grid;
+    gap: var(--space-m);
+    list-style: none;
+    padding: 0;
+    margin: var(--space-l) 0 0;
+}
+
+.project-gallery figure,
+.flyer-pair figure {
+    margin: 0;
+}
+
+.project-gallery img,
+.flyer-pair img {
+    display: block;
+    width: 100%;
+}
+
+.project-gallery figcaption,
+.flyer-pair figcaption {
+    margin-top: var(--space-s);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* --- Outils --- */
+.project-tools-section {
+    margin-top: var(--space-l);
+}
+
+.project-tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-s);
+    list-style: none;
+    padding: 0;
+    margin: var(--space-m) 0 0;
+}
